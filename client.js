@@ -5,7 +5,7 @@ function test() {
 setInterval(test, 30000);
 
 var mainloop = function() {
-  //test();
+  ;
 };
 
 var animFrame = window.requestAnimationFrame ||
