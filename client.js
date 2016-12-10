@@ -6,4 +6,7 @@ $( document ).ready(function(){
 				$('<li />', {html: text}).appendTo('#game-chat');
 			}
 		});
+		$("#game-form").submit(function(e) {
+			e.preventDefault();
+		});
 });

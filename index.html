@@ -95,8 +95,10 @@
             <div style="width:fill;height:400px;border:1px solid #000;position:relative;">
 							<ul id="game-chat">
 							</ul>
-							<input type='text' id='idea' />
-							<input type='button' value='add to list' id='add' />
+							<form id='game-form' onSubmit='preventDefault'>
+								<input type='text' id='idea' />
+								<button id='add'>Send</button>
+							</form>
             </div>
         </div>
     </section>
