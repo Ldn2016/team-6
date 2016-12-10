@@ -1,9 +1,3 @@
-function test() {
-	alert("TEST");
-}
-
-setInterval(test, 30000);
-
 var mainloop = function() {
   ;
 };
