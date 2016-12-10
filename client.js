@@ -26,8 +26,12 @@ $( document ).ready(function(){
 				random = false;
 				setTimeout(function(){
 		      var li = document.createElement("LI");
-					var text = "Your acting out of character!";
-					var response = document.createTextNode(text);
+					var counter = Math.round(Math.random()*3);
+					var responses = ["Your acting out of character!",
+													 "Where did that come from??",
+													 "Whats going on with you?",
+													 "No need for that!"];
+					var response = document.createTextNode(responses[counter]);
 					li.className = "game-messageR";
 		      li.appendChild(response);
 		      document.getElementById("game-chat").appendChild(li);
