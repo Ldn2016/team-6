@@ -16,8 +16,12 @@ $( document ).ready(function(){
         var li = document.createElement("LI");
         var response = document.createTextNode("Don't tell me you forgot our meeting today...");
 				li.className = "game-messageR";
+				var x = document.createElement("LI").innerHeight;
+				var div = document.createElement("div");
+				div.style.height = x;
         li.appendChild(response);
-        document.getElementById("game-chat").appendChild(li);
+				div.append(li);
+        document.getElementById("game-chat").appendChild(div);
       }, 2000);
      });
 });

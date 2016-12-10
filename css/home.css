@@ -19,6 +19,16 @@ body {
 	overflow-x: hidden;
 }
 
+#idea [type="text"] {
+  padding: 10px;
+  border: solid 5px #c9c9c9;
+  transition: border 0.3s;
+}
+#idea [type="text"]:focus,
+#idea [type="text"].focus {
+  border: solid 5px #969696;
+}
+
 .game-message{
   position: relative;
 	display: table;
@@ -36,6 +46,7 @@ body {
 	display: table;
   padding: 15px;
 	float: right;
+	margin-left: 80%;
   margin-right: 20px;
   margin-top: 20px;
   color: white;
