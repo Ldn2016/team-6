@@ -9,7 +9,6 @@ $( document ).ready(function(){
 				node.className = "game-message";
 				if (random) {
 					var textnode = document.createTextNode("The rain in spain");
-					random = false;
 				} else {
 					var textnode = document.createTextNode(text); 
 				}
@@ -23,7 +22,17 @@ $( document ).ready(function(){
 			var i = $('#counter').val();
 			i++;
 			$('#counter').val(i);
-			if (!x) {
+			if (random) {
+				random = false;
+				setTimeout(function(){
+		      var li = document.createElement("LI");
+					var text = "Your acting out of character!";
+					var response = document.createTextNode(text);
+					li.className = "game-messageR";
+		      li.appendChild(response);
+		      document.getElementById("game-chat").appendChild(li);
+		    }, 2000);
+			} else if (!x) {
 				x = true;
 		    setTimeout(function(){
 		      var li = document.createElement("LI");
