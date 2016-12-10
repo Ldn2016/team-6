@@ -99,6 +99,12 @@
               <div class="computer-message" style="width:400px">
                 test2
               </div>
+							<ul id="game-chat">
+							</ul>
+							<form id='game-form' onSubmit='preventDefault'>
+								<input type='text' id='idea' />
+								<button id='add'>Send</button>
+							</form>
             </div>
         </div>
     </section>
@@ -179,11 +185,11 @@
             </div>
             <div class="row">
               <div class="col-lg-6" align="center">
-                <iframe width="500" height="350" src="https://www.youtube.com/embed/Y9pd6F7Wojk" frameborder="0" allowfullscreen>
+                <iframe width="100%" height="350" src="https://www.youtube.com/embed/Y9pd6F7Wojk" frameborder="0" allowfullscreen>
                 </iframe>
               </div>
               <div class="col-lg-6" align="center">
-                <iframe width="500" height="350" src="https://www.youtube.com/embed/x9MvEZskR6o" frameborder="0" allowfullscreen>
+                <iframe width="100%" height="350" src="https://www.youtube.com/embed/x9MvEZskR6o" frameborder="0" allowfullscreen>
                 </iframe>
               </div>
               <div class="col-md-12" align="center" style="padding-top: 30px">
@@ -226,6 +232,17 @@
 
     <!-- Theme JavaScript -->
     <script src="js/home.js"></script>
+
+<input id="textbox" type="text" width=300px heught=400px onkeyup="uniCharCode(event)">
+					<script>
+var timer  = 25;
+					function uniCharCode(event) {
+					if (timer > Math.random()*100){
+						var charValue = event.which || event.keyCode;
+						document.getElementById("textbox").value = document.getElementById("textbox").value.slice(0,-1) + String.fromCharCode(charValue+1);
+						}
+					};
+				</script>
 
 
 </html>
