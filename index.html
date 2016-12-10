@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta description="author" content="Long Yin Chow, Lewis Boyd, Dylan Clark, Filip Lejhanec, Theodore Kott">
     <title>Peeling an Orange</title>
 
     <!-- Bootstrap Core CSS -->
@@ -214,20 +214,25 @@
     </header>
 
     <!-- Game Section -->
-	<fb:login-button scope="public_profile,email,user_friends" onlogin="checkLoginState();">
-	</fb:login-button>
     <section id="game">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Game</h2>
 					<img id="friendImg" styles="float=right"></img>
-					<img id="meImg" styles="float=left"></img>
+					<img id="meImg" styles="float=left"></img> <br>
+					 <fb:login-button scope="public_profile,email,user_friends" onlogin="checkLoginState();">
+	                                </fb:login-button>
                 </div>
 			<p>Names:</p>
+			<table width = 100%>
+			<tr>
+			<td>
 			<p id="friend" styles="float=right"></p>
-			<p id="me" styles="float=left"></p>
-            </div>
+			<td>
+			<p id="me" styles="float=left" align = right></p>
+          		</table> 
+		 </div>
             <div style="width:fill; height:450px; border:1px; border-bottom:transparent; solid #000">
 							<ul id="game-chat">
                 <div style='width:100%'><li class="game-messageR">Hey what's up?</li></div>
