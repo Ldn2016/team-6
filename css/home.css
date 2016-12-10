@@ -14,18 +14,26 @@ body {
 	height: 80%;
 	padding: 0;
 	margin: 0;
+	border: solid 5px #c9c9c9;
+	border-bottom: none;
 	overflow: scroll;
 	list-style: none;
 	overflow-x: hidden;
 }
 
-#idea [type="text"] {
+#add{
+	visibility: hidden;
+}
+
+#idea  {
+	width:100%;
+	height:100%;
   padding: 10px;
   border: solid 5px #c9c9c9;
   transition: border 0.3s;
 }
-#idea [type="text"]:focus,
-#idea [type="text"].focus {
+#idea:focus,
+#idea.focus {
   border: solid 5px #969696;
 }
 
