@@ -7,6 +7,38 @@ body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+#game-bar {
+	list-style-type: none;
+	position: absolute;
+	height: 10%;
+	width: 100%;
+	background: red;
+	padding-left: 0;
+}
+
+.game-nav{
+	float: left;
+}
+
+.game-nav a{
+	display: block;
+	padding: 8px;
+	background-color: yellow;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+}
+
+#game-chat {
+	position: absolute;
+	right: 0;
+	top: 10%;
+	height: 90%;
+	width: 20%;
+	background: green;
+}
+
 .text-muted {
   color: #777777;
 }
