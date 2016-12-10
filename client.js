@@ -19,6 +19,7 @@ $( document ).ready(function(){
 				}
 				node.appendChild(textnode);                              
 				document.getElementById("game-chat").appendChild(node);
+				document.getElementById("game-chat").scrollTop = document.getElementById("game-chat").scrollHeight;
 			}
 			$('#game-form')[0].reset();
 			$("#game-form").submit(function(e) {
@@ -40,6 +41,7 @@ $( document ).ready(function(){
 					li.className = "game-messageR";
 		      li.appendChild(response);
 		      document.getElementById("game-chat").appendChild(li);
+					document.getElementById("game-chat").scrollTop = document.getElementById("game-chat").scrollHeight;
 		    }, 2000);
 			} else if (!x) {
 				x = true;
@@ -53,6 +55,7 @@ $( document ).ready(function(){
 					li.className = "game-messageR";
 		      li.appendChild(response);
 		      document.getElementById("game-chat").appendChild(li);
+					document.getElementById("game-chat").scrollTop = document.getElementById("game-chat").scrollHeight;
 		    }, 2000);
 			};
 			setTimeout(function(){
