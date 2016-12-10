@@ -1,23 +1,9 @@
-var mainloop = function() {
-  ;
-};
-
-var animFrame = window.requestAnimationFrame ||
-  window.webkitRequestAnimationFrame ||
-  window.mozRequestAnimationFrame    ||
-  window.oRequestAnimationFrame      ||
-  window.msRequestAnimationFrame     ||
-  null ;
-
-if ( animFrame !== null ) {
-  var recursiveAnim = function() {
-    mainloop();
-    animFrame( recursiveAnim );
-  };
-
-  // start the mainloop
-	animFrame( recursiveAnim );
-} else {
-  var ONE_FRAME_TIME = 1000.0 / 60.0 ;
-  setInterval( mainloop, ONE_FRAME_TIME );
-}
+$( document ).ready(function(){
+    console.log( "ready!" );
+		$('#add').click(function(){
+			var text = $('#idea').val();
+			if(text.length){
+				$('<li />', {html: text}).appendTo('#game-chat');
+			}
+		});
+});
