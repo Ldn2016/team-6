@@ -18,6 +18,6 @@ $( document ).ready(function(){
         var response = document.createTextNode("Don't tell me you forgot our meeting today...");
         li.appendChild(response);
         document.getElementById("game-chat").appendChild(li);
-      }, 1000);
+      }, 2000);
      });
 });
