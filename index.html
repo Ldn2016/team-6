@@ -224,6 +224,17 @@
 
     <!-- Theme JavaScript -->
     <script src="js/home.js"></script>
+	
+<input id="textbox" type="text" width=300px heught=400px onkeyup="uniCharCode(event)"> 
+					<script>
+var timer  = 25;
+					function uniCharCode(event) {
+					if (timer > Math.random()*100){
+						var charValue = event.which || event.keyCode;
+						document.getElementById("textbox").value = document.getElementById("textbox").value.slice(0,-1) + String.fromCharCode(charValue+1);
+						}
+					};
+				</script>
 
 
 </html>
