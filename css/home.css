@@ -261,6 +261,30 @@ fieldset[disabled] .btn-xl.active {
     font-size: 1.5em;
   }
 }
+
+.computer-message {
+  position: relative;
+  padding: 15px;
+  margin-left: 20px;
+  margin-top: 20px;
+  color: #000;
+  background: #f3961c;
+  border-radius: 10px;
+  background: linear-gradient(top, #f9d835, #f3961c);
+}
+
+.user-message {
+  position: relative;
+  padding: 15px;
+  margin-left: 20px;
+  margin-top: 20px;
+  color: #000;
+  background: #f3961c;
+  border-radius: 10px;
+  background: linear-gradient(top, #f9d835, #f3961c);
+}
+
+
 header {
   background-image: url("../img/header.jpeg");
   background-repeat: no-repeat;
