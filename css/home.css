@@ -31,6 +31,19 @@ body {
   background: linear-gradient(top, #f9d835, #f3961c);
 }
 
+.game-messageR{
+  position: relative;
+	display: table;
+  padding: 15px;
+	float: right;
+  margin-right: 20px;
+  margin-top: 20px;
+  color: white;
+  background: #008B8B;
+  border-radius: 10px;
+  background: linear-gradient(top, #f9d835, #f3961c);
+}
+
 #game-form{
 	position: relative;
 	width: 100%;

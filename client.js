@@ -1,5 +1,4 @@
 $( document ).ready(function(){
-    console.log( "ready!" );
 		$('#add').click(function(){
 			var text = $('#idea').val();
 			if(text.length){
@@ -16,6 +15,7 @@ $( document ).ready(function(){
       setTimeout(function(){
         var li = document.createElement("LI");
         var response = document.createTextNode("Don't tell me you forgot our meeting today...");
+				li.className = "game-messageR";
         li.appendChild(response);
         document.getElementById("game-chat").appendChild(li);
       }, 2000);
