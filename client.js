@@ -1,10 +1,17 @@
+var x = false;
+var random = false;
 $( document ).ready(function(){
 		$('#add').click(function(){
 			var text = $('#idea').val();
 			if(text.length){
 				var node = document.createElement("LI");  
 				node.className = "game-message";
-				var textnode = document.createTextNode(text);         
+				if (random) {
+					var textnode = document.createTextNode("YOU SMELL!");
+					random = false;
+				} else {
+					var textnode = document.createTextNode(text); 
+				}
 				node.appendChild(textnode);                              
 				document.getElementById("game-chat").appendChild(node);
 			}
@@ -12,16 +19,28 @@ $( document ).ready(function(){
 			$("#game-form").submit(function(e) {
 				e.preventDefault();
 			});
-      setTimeout(function(){
-        var li = document.createElement("LI");
-        var response = document.createTextNode("Don't tell me you forgot our meeting today...");
-				li.className = "game-messageR";
-				var x = document.createElement("LI").innerHeight;
-				var div = document.createElement("div");
-				div.style.height = x;
-        li.appendChild(response);
-				div.append(li);
-        document.getElementById("game-chat").appendChild(div);
-      }, 2000);
+			if (!x) {
+				x = true;
+				setTimeout(function(){
+					var li = document.createElement("LI");
+					var response = document.createTextNode("Don't tell me you forgot our meeting today...");
+					li.className = "game-messageR";
+					li.appendChild(response);
+					document.getElementById("game-chat").appendChild(li);
+				}, 2000);
+				setTimeout(function(){
+					x = false;
+				}, 4000);
+			}
      });
 });
+
+setInterval(setRandom, 20000);
+
+function setRandom(){
+	random = true;
+}
+
+function test() {
+	document.getElementById("idea").value = "My Value";
+}
