@@ -3,7 +3,11 @@ $( document ).ready(function(){
 		$('#add').click(function(){
 			var text = $('#idea').val();
 			if(text.length){
-				$('<li/>', {html: text}).appendTo('#game-chat');
+				var node = document.createElement("LI");  
+				node.className = "game-message";
+				var textnode = document.createTextNode(text);         
+				node.appendChild(textnode);                              
+				document.getElementById("game-chat").appendChild(node);
 			}
 			$('#game-form')[0].reset();
 		});
