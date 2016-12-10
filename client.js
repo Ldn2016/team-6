@@ -1,5 +1,6 @@
 var x = false;
 var random = false;
+var done = false;
 $( document ).ready(function(){
 		var x = false;
 		$('#add').click(function(){
@@ -25,9 +26,6 @@ $( document ).ready(function(){
 			$("#game-form").submit(function(e) {
 				e.preventDefault();
 			});
-			var i = $('#counter').val();
-			i++;
-			$('#counter').val(i);
 			if (random) {
 				random = false;
 				setTimeout(function(){
@@ -43,15 +41,23 @@ $( document ).ready(function(){
 		      document.getElementById("game-chat").appendChild(li);
 					document.getElementById("game-chat").scrollTop = document.getElementById("game-chat").scrollHeight;
 		    }, 2000);
-			} else if (!x) {
+			} else if (!x || !done) {
+				var i = $('#counter').val();
+				i++;
+				$('#counter').val(i);
 				x = true;
 		    setTimeout(function(){
 		      var li = document.createElement("LI");
 					var responses = ["Are we still on for today?",
 													 "Don't tell me you forgot our meeting today...",
 												 	 "You ditching me again?",
-												 	 "I am very sad..."];
+												 	 "I am very sad...",
+													 "I'm tired I need to go.",
+													 "Bye."];
 					var response = document.createTextNode(responses[i]);
+					if (i === 6) {
+						done = true;
+					}
 					li.className = "game-messageR";
 		      li.appendChild(response);
 		      document.getElementById("game-chat").appendChild(li);
