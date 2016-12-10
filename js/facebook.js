@@ -135,9 +135,20 @@ $(document ).ready(function(){
     "/"+friendID+"/picture",
     function (response) {
       if (response && !response.error) {
-    console.log("IMAGE: " + JSON.stringify(response));
-        $("h2").text(response.data.url);
-    $("img").attr("src",response.data.url);
+    console.log("Friend image: " + JSON.stringify(response));
+       // $("h2").text(response.data.url);
+    $("#friendImg").attr("src",response.data.url);
+      }
+    }
+  );
+  
+  FB.api(
+	"/me/picture",
+	function (response) {
+      if (response && !response.error) {
+    console.log("Me image: " + JSON.stringify(response));
+       // $("h2").text(response.data.url);
+    $("#meImg").attr("src",response.data.url);
       }
     }
   );
