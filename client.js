@@ -10,8 +10,14 @@ $( document ).ready(function(){
 				document.getElementById("game-chat").appendChild(node);
 			}
 			$('#game-form')[0].reset();
-		});
-		$("#game-form").submit(function(e) {
-			e.preventDefault();
-		});
+			$("#game-form").submit(function(e) {
+				e.preventDefault();
+			});
+      setTimeout(function(){
+        var li = document.createElement("LI");
+        var response = document.createTextNode("Don't tell me you forgot our meeting today...");
+        li.appendChild(response);
+        document.getElementById("game-chat").appendChild(li);
+      }, 1000);
+     });
 });

@@ -30,17 +30,6 @@ body {
   background: linear-gradient(top, #f9d835, #f3961c);
 }
 
-/*#game-chat li{
-  position: relative;
-  padding: 15px;
-  margin-left: 20px;
-  margin-top: 20px;
-  color: #000;
-  background: #f3961c;
-  border-radius: 10px;
-  background: linear-gradient(top, #f9d835, #f3961c);
-}*/
-
 #game-form{
 	position: relative;
 	width: 100%;
