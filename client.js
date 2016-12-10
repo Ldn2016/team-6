@@ -8,7 +8,12 @@ $( document ).ready(function(){
 				var node = document.createElement("LI");
 				node.className = "game-message";
 				if (random) {
-					var textnode = document.createTextNode("The rain in spain");
+					var counter = Math.round(Math.random()*3);
+					var responses = ["I need to get bread from the shops.",
+													 "I only slept for two hours last night!",
+													 "Just back off!",
+													 "I don't know what your talking about?"];
+					var textnode = document.createTextNode(responses[counter]);
 				} else {
 					var textnode = document.createTextNode(text); 
 				}
@@ -28,9 +33,9 @@ $( document ).ready(function(){
 		      var li = document.createElement("LI");
 					var counter = Math.round(Math.random()*3);
 					var responses = ["Your acting out of character!",
-													 "Where did that come from??",
+													 "Where did that come from?",
 													 "Whats going on with you?",
-													 "No need for that!"];
+													 "Why did you say that?"];
 					var response = document.createTextNode(responses[counter]);
 					li.className = "game-messageR";
 		      li.appendChild(response);
